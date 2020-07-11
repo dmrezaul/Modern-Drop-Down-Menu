@@ -1,0 +1,92 @@
+/*DEFAULT CSS*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ecf0f1;
+}
+
+/*NAV MENU*/
+
+.nav-menu {
+    background: #3498db;
+}
+
+.nav-menu ul {
+    text-align: center;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    margin-left: -3px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+.nav-menu ul li:first-child a {
+    border-left: 1px solid #ddd;
+}
+
+.nav-menu ul li:hover>a {
+    background: #3498db;
+}
+
+
+/*DROP DOWN*/
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li ul {
+    position: absolute;
+    width: 170px;
+    border-top: 1px solid #ddd;
+    top: 100%;
+    left: 0;
+    background: #3498db;
+
+    transition: .4s;
+}
+
+.nav-menu ul li ul li {
+    display: block;
+    margin-left: 0;
+}
+
+.nav-menu ul li ul li a {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+}
+
+.nav-menu ul li ul li:first-child a {
+    border-left: none;
+}
+
+/*DROPDOWN HOVER*/
+
+.nav-menu ul li ul {
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+
+    transform-origin: top center;
+}
+
+.nav-menu ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
